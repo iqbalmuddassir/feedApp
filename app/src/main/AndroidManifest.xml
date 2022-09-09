@@ -5,6 +5,8 @@
     package="com.example.feedapp"
     >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,6 +16,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FeedApp"
         tools:targetApi="31"
-        />
+        >
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FeedApp"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
 
 </manifest>
